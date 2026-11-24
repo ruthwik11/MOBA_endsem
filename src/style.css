@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+}
+
+body { margin: 0; min-width: 320px; }
+.page { width: min(1000px, calc(100% - 32px)); margin: 0 auto; padding: 54px 0 28px; }
+.heading { text-align: center; margin-bottom: 34px; }
+.eyebrow { color: #5367d8; font-size: 12px; font-weight: 800; letter-spacing: 2px; }
+h1 { margin: 8px 0; font-size: clamp(30px, 5vw, 42px); letter-spacing: -1.5px; }
+.subtitle, .hint { color: #68738a; }
+.subtitle { margin: 0; }
+.forms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: start; }
+.panel { background: white; padding: 28px; border: 1px solid #e5eaf2; border-radius: 18px; box-shadow: 0 12px 35px rgba(26, 42, 75, .06); }
+h2 { margin: 0 0 6px; font-size: 22px; }
+.hint { margin: 0 0 22px; font-size: 14px; }
+form { display: grid; gap: 15px; }
+label { display: grid; gap: 7px; font-size: 13px; font-weight: 650; color: #34405a; }
+input { width: 100%; padding: 12px 13px; border: 1px solid #dce2ec; border-radius: 9px; font: inherit; font-size: 14px; outline: none; transition: border .2s, box-shadow .2s; }
+input:focus { border-color: #586be0; box-shadow: 0 0 0 3px rgba(88, 107, 224, .13); }
+button { border: 0; border-radius: 9px; padding: 13px 16px; background: #5367d8; color: white; font: inherit; font-weight: 700; cursor: pointer; margin-top: 3px; }
+button:hover { background: #4054c5; }
+.result, .message { margin-top: 20px; padding: 15px; border-radius: 10px; font-size: 14px; }
+.result { background: #f0f7ff; border: 1px solid #d9eaff; }
+.result h3 { margin: 0 0 10px; color: #245c9c; font-size: 15px; }
+.result p { margin: 5px 0; }
+.small-note { color: #748097; font-size: 12px; }
+.message.success { color: #17633d; background: #eaf8f0; border: 1px solid #c9ecd8; }
+.message.error { color: #a52e36; background: #fff0f0; border: 1px solid #f4d0d0; }
+.demo-tip { margin-top: 24px; padding: 15px; background: #f7f8fc; border-radius: 10px; color: #58647b; font-size: 13px; line-height: 1.6; }
+.demo-tip strong { color: #34405a; }
+.demo-tip ol { padding-left: 19px; margin: 7px 0 0; }
+footer { text-align: center; color: #8993a6; font-size: 12px; margin-top: 28px; }
+@media (max-width: 720px) {
+  .page { padding-top: 32px; }
+  .forms { grid-template-columns: 1fr; }
+  .panel { padding: 22px; }
+}
